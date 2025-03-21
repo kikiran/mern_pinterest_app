@@ -1,6 +1,7 @@
 import React from "react";
 import { Input } from "../ui/input";
 import { FaSearch, FaRegUserCircle, FaCaretDown } from "react-icons/fa";
+import Link from "next/link";
 
 const SearchBar = () => {
 	const iconClass = "text-3xl text-gray-600  cursor-pointer";
@@ -18,7 +19,9 @@ const SearchBar = () => {
 
 			{/* User Circle and Down Arrow outside the Input */}
 			<div className="flex items-center ml-4 pr-4 space-x-2">
-				<FaRegUserCircle className={iconClass} />
+				<Link href="/profile">
+					<FaRegUserCircle className={iconClass} />
+				</Link>
 				<FaCaretDown className={iconClass} />
 			</div>
 		</div>
